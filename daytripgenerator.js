@@ -4,6 +4,8 @@ let restuarantChoices= ['Mcdonalds', 'Burger King', 'Wendys'];
 
 let entertainmentChoices = ['skiing', 'snowboarding', 'bloodsport'];
 
+let travelChoices = ['walking', 'driving', 'biking'];
+
 
 let randomNumber;
 
@@ -15,63 +17,90 @@ return randomNumber;
 RandomNumberGenerator();
 
 
+
 console.log("You will be going to" + " " + destinationChoices[randomNumber]);
-let ContinueDestinationLoop = true;
+let continueDestinationLoop = true;
 let doYouLikeThisChoiceDestination = prompt("Do you Like this choice and want to keep it?");
 let goodDestination;
-while (ContinueDestinationLoop === true)
+while (continueDestinationLoop === true)
 {
     if ( doYouLikeThisChoiceDestination === "yes"){
-        ContinueDestinationLoop = false;
+        continueDestinationLoop = false;
         goodDestination = destinationChoices[randomNumber];
     }
     else {
         RandomNumberGenerator();
         console.log("how about " + destinationChoices[randomNumber]);
-        ContinueDestinationLoop = true;
+        continueDestinationLoop = true;
         doYouLikeThisChoiceDestination = prompt("Do you Like this choice and want to keep it?");
     }
     
 }
+
+
+
 console.log("You will be eating at" + " " + restuarantChoices[randomNumber]);
-let ContinueRestaurantLoop = true;
+let continueRestaurantLoop = true;
 let doYouLikeThisChoiceRestaurant = prompt("Do you Like this choice and want to keep it?");
 let goodRestaurant;
-while (ContinueRestaurantLoop === true)
+while (continueRestaurantLoop === true)
 {
     if (doYouLikeThisChoiceRestaurant === "yes"){
-       ContinueRestaurantLoop = false;
+       continueRestaurantLoop = false;
         goodRestaurant = restuarantChoices[randomNumber];
     }
     else {
         RandomNumberGenerator();
         console.log("how about " + restuarantChoices[randomNumber]);
-        ContinueRestaurantLoop = true;
+        continueRestaurantLoop = true;
         doYouLikeThisChoiceRestaurant = prompt("Do you Like this choice and want to keep it?");
     }
     
 }
+
+
+console.log("You will be traveling by" + " " + travelChoices[randomNumber]);
+let continueTravelLoop = true;
+let doYouLikeThisChoiceTravel = prompt("Do you Like this choice and want to keep it?");
+let goodTranspo;
+while (continueTravelLoop === true)
+{
+    if (doYouLikeThisChoiceTravel === "yes"){
+       continueTravelLoop = false;
+        goodTranspo = travelChoices[randomNumber];
+    }
+    else {
+        RandomNumberGenerator();
+        console.log("how about " + restuarantChoices[randomNumber]);
+        continueTravelLoop = true;
+        doYouLikeThisChoiceTravel = prompt("Do you Like this choice and want to keep it?");
+    }
+    
+}
+
+
+
 console.log("You will be enjoying" + " " + entertainmentChoices[randomNumber]);
-let ContinueEntertainmentLoop = true;
+let continueEntertainmentLoop = true;
 let doYouLikeThisChoiceEntertainment = prompt("Do you Like this choice and want to keep it?");
 let goodEntertainment;
-while (ContinueEntertainmentLoop === true)
+while (continueEntertainmentLoop === true)
 {
-let doYouLikeThisChoiceEntertainment = prompt("Do you Like this choice and want to keep it?");
+
     if (doYouLikeThisChoiceEntertainment === "yes"){
-       ContinueEntertainmentLoop = false;
+       continueEntertainmentLoop = false;
         goodEntertainment = entertainmentChoices[randomNumber];
     }
     else {
         RandomNumberGenerator();
         console.log("how about " + entertainmentChoices[randomNumber]);
-        ContinueEntertainmentLoop = true;
+        continueEntertainmentLoop = true;
         doYouLikeThisChoiceEntertainment = prompt("Do you Like this choice and want to keep it?");
     }
     
 }
 
-console.log("you selected going to " + goodDestination + " eating at " + goodRestaurant + " and enjoying " + goodEntertainment);
+console.log("you selected going to " + goodDestination + " eating at " + goodRestaurant +  " traveling by " + goodTranspo +  " and enjoying " + goodEntertainment);
 
 
 let continueFullLoop = true;
@@ -85,7 +114,7 @@ while (continueFullLoop === true){
     }
     else{
         RandomNumberGenerator();
-        console.log("how about going to  " + destinationChoices[randomNumber] + " eating at " + restuarantChoices[randomNumber] + " and enjoying " + entertainmentChoices[randomNumber]);
+        console.log("how about going to  " + destinationChoices[randomNumber] + " eating at " + restuarantChoices[randomNumber] + " traveling by " + travelChoices[randomNumber] + " and enjoying " + entertainmentChoices[randomNumber]);
         continueFullLoop = true;
         doYouLikeAllOfTheChoices = prompt('Do you like all of these choices and accept?');
         
